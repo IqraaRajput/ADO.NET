@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ADO.NET.Models.BirdsModel>
+
+@{
+    ViewBag.Title = "ShowAll";
+}
+
+<h2>ShowAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "UpdateBirds")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeofBird)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScientificName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirdName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeofBird)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScientificName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditDetails", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "DeleteBird", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
