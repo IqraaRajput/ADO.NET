@@ -26,26 +26,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BirdName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TypeofBird)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ScientificName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "EditDetails", new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "DeleteBird", new { id = item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeofBird)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScientificName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditDetails", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "DeleteBird", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
+
+

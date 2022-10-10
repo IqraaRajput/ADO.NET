@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+            
+                $("#flip").click(function () {
+                    $("#panel").slideToggle("slow");
+                });
+            $("#flips").click(function () {
+                $("#div").fadeIn("slow");
+               
+            });
+            $("#flop").click(function () {
+                $("#a").animate({ left: '250px' });
+                $("img").animate({ left: '250px' });
+            });
+            $(document).ready(function () {
+                $("#submit").click(function () {
+                    $("#panel").slideDown(5000);
+                });
+                $("#click").click(function () {
+                    $("#panel").stop();
+                });
+            });
+
+
+            });
+    </script>
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+        #panel, #submit {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+            border-radius: 3px;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button id="hide">Click me to hide paragraphs</button>
+    <button id="show">show</button>
+
+    <div id="flip">Introduction</div>
+    <div id="panel">My Name is Areeeba.I am Graduated In Computer Science</div>
+    <button id="flips">Click to fade in boxes</button><br><br>
+    <h2 id="div" style="width:200px;height:50px;display:none;background-color:thistle;"> Projects </h2><br>
+
+    <button id="flop"> Start Animation</button>
+
+
+    <div id="a" style="background:#98bf21;height:100px;width:100px;position:absolute;">I am great</div>
+
+    <!--<img id="a" src="book3.jpg" width:150px;height:200px">-->
+    <button id="stop">Stop sliding</button>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

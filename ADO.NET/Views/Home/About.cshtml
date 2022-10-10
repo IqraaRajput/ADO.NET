@@ -5,3 +5,18 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+@section my_jquery{
+    <script>
+
+
+
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+        //$(document).ready(function () {
+        //    alert("hi");
+        //});
+    </script>
+}
